@@ -13,6 +13,21 @@
         <name>bhaskar</name>
         <url>http://www.example.com</url>
     </organization>
+    <properties>
+           <!-- SonarQube analysis properties -->
+           <sonar.host.url>http://15.206.173.254:9000</sonar.host.url>
+           <!-- SonarQube authentication credentials -->
+           <sonar.login>admin</sonar.login>
+           <sonar.password>sonarqube</sonar.password>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>nexus</id>
+            <name>amazon remote repo</name>
+            <url>http://13.233.253.196:8081/repository/proxyrepo/</url>
+        </repository>
+    </repositories>
 
     <!-- Project dependencies -->
     <dependencies>
@@ -31,7 +46,28 @@
             <version>4.13.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+           <groupId>com.bhaskar</groupId>
+           <artifactId>cassandra</artifactId>
+           <version>2.1.1</version>
+        </dependency>
+
+
     </dependencies>
+
+    <distributionManagement>
+     <repository>
+        <id>nexus</id>
+        <name>amazon release</name>
+        <url>http://13.233.253.196:8081/repository/amazon-release/</url>
+     </repository>
+    <snapshotRepository>
+        <id>nexus</id>
+        <name>amazon snapshot</name>
+        <url>http://13.233.253.196:8081/repository/amazon-snapshot/</url>
+    </snapshotRepository>
+   </distributionManagement>
+
 
     <!-- Maven build configuration -->
     <build>
@@ -59,4 +95,3 @@
         </plugins>
     </build>
 </project>
-
