@@ -25,7 +25,7 @@
         <repository>
             <id>nexus</id>
             <name>amazon remote repo</name>
-            <url>http://13.233.253.196:8081/repository/proxyrepo/</url>
+            <url>http://172.31.4.148:8081/repository/proxyrepo/</url>
         </repository>
     </repositories>
 
@@ -59,12 +59,12 @@
      <repository>
         <id>nexus</id>
         <name>amazon release</name>
-        <url>http://13.233.253.196:8081/repository/amazon-release/</url>
+        <url>http://172.31.4.148:8081/repository/amazon-release/</url>
      </repository>
     <snapshotRepository>
         <id>nexus</id>
         <name>amazon snapshot</name>
-        <url>http://13.233.253.196:8081/repository/amazon-snapshot/</url>
+        <url>http://172.31.4.148:8081/repository/amazon-snapshot/</url>
     </snapshotRepository>
    </distributionManagement>
 
